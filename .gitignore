@@ -1,5 +1,6 @@
 # Dependencies
 node_modules/
+.vercel/
 
 # Local databases and runtime data
 prototype/.data/

@@ -1,0 +1,14 @@
+{
+  "name": "velcoris-project",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.x"
+  },
+  "scripts": {
+    "build": "cd prototype && npm run build",
+    "test": "cd prototype && npm test",
+    "start": "cd prototype && npm start"
+  }
+}
+

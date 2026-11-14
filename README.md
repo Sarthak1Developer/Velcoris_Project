@@ -53,14 +53,24 @@ Run the end-to-end HTTP smoke test:
 node scripts/smoke-http.mjs
 ```
 
-### Production Build
+### Production Build & Deployment
 
+#### Cloudflare Workers
 Bundle static assets and handler logic into a single worker file:
 ```bash
 npm run build
 ```
-
 The output bundle is generated at `prototype/dist/server/index.js`.
+
+#### Vercel
+The project is configured for deployment on Vercel:
+1. Push this repository to GitHub/GitLab and import it in your **Vercel Dashboard**.
+2. **Framework Preset:** Select *Other* (or standard Node.js).
+3. **Environment Variables (Optional):**
+   - `ADMIN_KEY`: Set your custom admin access key (defaults to `oGdQoJ7iEDM8bwIrJT0zl0NcWm7DCjtg`).
+   - `TURSO_DATABASE_URL`: *(Recommended for production)* URL of your Turso SQLite database (e.g., `libsql://your-db-org.turso.io`).
+   - `TURSO_AUTH_TOKEN`: Your Turso auth token.
+   *(Note: If Turso credentials are omitted, Vercel will run using an ephemeral local SQLite database in `/tmp/enquiries.sqlite` for instant preview/testing).*
 
 ## Technical Summary
 

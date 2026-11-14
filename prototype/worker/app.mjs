@@ -36,7 +36,7 @@ async function readJSON(request) {
   if (!reader) throw new HttpError(400, 'Request body is required.');
   let size = 0, chunks = [];
   try {
-    for (;;) {
+    for (; ;) {
       const { done, value } = await reader.read();
       if (done) break;
       size += value.byteLength;
