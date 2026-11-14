@@ -176,6 +176,90 @@ function createTursoAdapter(url, token) {
   };
 }
 
+function createMemoryStoreAdapter() {
+  const enquiries = new Map();
+  const rateLimits = new Map();
+
+  return {
+    prepare(sql) {
+      let values = [];
+      return {
+        bind(...bound) {
+          values = bound;
+          return this;
+        },
+        async first() {
+          if (sql.includes('SELECT 1 AS ok')) return { ok: 1 };
+          if (sql.includes('request_key=?')) {
+            const reqKey = values[0];
+            for (const item of enquiries.values()) {
+              if (item.request_key === reqKey) {
+                return { id: item.id, created_at: item.created_at, request_hash: item.request_hash };
+              }
+            }
+            return null;
+          }
+          if (sql.includes('SELECT id FROM enquiries WHERE id=?')) {
+            const id = values[0];
+            const item = enquiries.get(id);
+            return item ? { id: item.id } : null;
+          }
+          if (sql.includes('FROM enquiries WHERE id=?')) {
+            const id = values[0];
+            return enquiries.get(id) || null;
+          }
+          if (sql.includes('COUNT(*) AS total FROM enquiries')) {
+            return { total: enquiries.size };
+          }
+          if (sql.includes('INSERT INTO rate_limits')) {
+            const bucket = values[0];
+            const prev = rateLimits.get(bucket) || 0;
+            rateLimits.set(bucket, prev + 1);
+            return { count: prev + 1 };
+          }
+          return null;
+        },
+        async all() {
+          if (sql.includes('FROM enquiries')) {
+            let list = Array.from(enquiries.values());
+            if (values.length > 0 && typeof values[0] === 'string' && ['new', 'in_progress', 'resolved'].includes(values[0])) {
+              list = list.filter(e => e.status === values[0]);
+            }
+            list.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+            return { results: list };
+          }
+          return { results: [] };
+        },
+        async run() {
+          if (sql.includes('INSERT INTO enquiries')) {
+            const [id, request_key, request_hash, name, email, organisation, intent, material, message, status, created_at, updated_at] = values;
+            enquiries.set(id, {
+              id, request_key, request_hash, name, email, organisation, intent, material, message,
+              status: status || 'new', revision: 0, created_at, updated_at
+            });
+            return { success: true, meta: { changes: 1 } };
+          }
+          if (sql.includes('UPDATE enquiries SET status=?')) {
+            const [status, updated_at, id, revision] = values;
+            const item = enquiries.get(id);
+            if (item && item.revision === revision) {
+              item.status = status;
+              item.revision += 1;
+              item.updated_at = updated_at;
+              return { success: true, meta: { changes: 1 } };
+            }
+            return { success: true, meta: { changes: 0 } };
+          }
+          if (sql.includes('DELETE FROM rate_limits')) {
+            return { success: true, meta: { changes: 0 } };
+          }
+          return { success: true, meta: { changes: 1 } };
+        }
+      };
+    }
+  };
+}
+
 let dbInstance = null;
 
 export async function getDatabase() {
@@ -197,19 +281,24 @@ export async function getDatabase() {
     return dbInstance;
   }
 
-  const isVercel = Boolean(process.env.VERCEL);
-  const dbPath = process.env.SQLITE_PATH || (isVercel ? '/tmp/enquiries.sqlite' : path.resolve(process.cwd(), '.data/enquiries.sqlite'));
-  const dir = path.dirname(dbPath);
-  if (!existsSync(dir)) {
-    mkdirSync(dir, { recursive: true });
+  try {
+    const isVercel = Boolean(process.env.VERCEL);
+    const dbPath = process.env.SQLITE_PATH || (isVercel ? '/tmp/enquiries.sqlite' : path.resolve(process.cwd(), '.data/enquiries.sqlite'));
+    const dir = path.dirname(dbPath);
+    if (!existsSync(dir)) {
+      mkdirSync(dir, { recursive: true });
+    }
+
+    const { DatabaseSync } = await import('node:sqlite');
+    const database = new DatabaseSync(dbPath);
+    database.exec('PRAGMA journal_mode=WAL; PRAGMA foreign_keys=ON;');
+    database.exec(MIGRATION_SQL);
+
+    dbInstance = createSqliteAdapter(database);
+    return dbInstance;
+  } catch (error) {
+    console.warn('Native SQLite unavailable, falling back to memory store:', error.message);
+    dbInstance = createMemoryStoreAdapter();
+    return dbInstance;
   }
-
-  const { DatabaseSync } = await import('node:sqlite');
-  const database = new DatabaseSync(dbPath);
-  database.exec('PRAGMA journal_mode=WAL; PRAGMA foreign_keys=ON;');
-  database.exec(MIGRATION_SQL);
-
-  dbInstance = createSqliteAdapter(database);
-  return dbInstance;
 }
-
