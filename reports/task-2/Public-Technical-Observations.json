@@ -1,0 +1,280 @@
+{
+  "observed_at_utc": "2026-11-13T17:03:54.586374+00:00",
+  "method": "Passive public GET requests and DNS-over-HTTPS lookups only; no contact form was submitted.",
+  "http_responses": [
+    {
+      "url": "https://velcorisindustries.com/",
+      "final_url": "https://velcorisindustries.com/",
+      "status": 200,
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "5363",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline",
+        "Content-Length": "79740",
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Fri, 13 Nov 2026 17:03:54 GMT",
+        "Etag": "\"82025265de4b8efe91013b72230195ad\"",
+        "Last-Modified": "Fri, 13 Nov 2026 15:34:30 GMT",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::x9f57-1794589434155-fd5734e3815f",
+        "Connection": "close"
+      }
+    },
+    {
+      "url": "https://velcorisindustries.com/contact",
+      "final_url": "https://velcorisindustries.com/contact",
+      "status": 200,
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "5365",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline; filename=\"contact\"",
+        "Content-Length": "31147",
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Fri, 13 Nov 2026 17:03:56 GMT",
+        "Etag": "\"f5042c9d8f33b2f5b157fd7b7019ea87\"",
+        "Last-Modified": "Fri, 13 Nov 2026 15:34:31 GMT",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::t28kg-1794589436381-9fcad2214b69",
+        "Connection": "close"
+      }
+    },
+    {
+      "url": "https://velcorisindustries.com/robots.txt",
+      "final_url": "https://velcorisindustries.com/robots.txt",
+      "status": 200,
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "0",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline; filename=\"robots.txt\"",
+        "Content-Length": "452",
+        "Content-Type": "text/plain; charset=utf-8",
+        "Date": "Fri, 13 Nov 2026 17:03:56 GMT",
+        "Etag": "\"6883ee014736f3a9ea15d6ee2c530b4f\"",
+        "Last-Modified": "Fri, 13 Nov 2026 17:03:56 GMT",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000",
+        "X-Vercel-Cache": "MISS",
+        "X-Vercel-Id": "bom1::trmh9-1794589436657-f3fc4e533aab",
+        "Connection": "close"
+      }
+    },
+    {
+      "url": "https://velcorisindustries.com/sitemap.xml",
+      "final_url": "https://velcorisindustries.com/sitemap.xml",
+      "status": 200,
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "0",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline; filename=\"sitemap.xml\"",
+        "Content-Length": "4364",
+        "Content-Type": "application/xml",
+        "Date": "Fri, 13 Nov 2026 17:03:57 GMT",
+        "Etag": "\"3dd00306768bb50f0bf33e81e4b0e935\"",
+        "Last-Modified": "Fri, 13 Nov 2026 17:03:57 GMT",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000",
+        "X-Vercel-Cache": "MISS",
+        "X-Vercel-Id": "bom1::sznt2-1794589437103-f88a6445c363",
+        "Connection": "close"
+      }
+    }
+  ],
+  "selected_assets": [
+    {
+      "url": "https://velcorisindustries.com/assets/main-D5N3TNDF.js",
+      "final_url": "https://velcorisindustries.com/assets/main-D5N3TNDF.js",
+      "status": 200,
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "6421",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline; filename=\"main-D5N3TNDF.js\"",
+        "Content-Length": "206128",
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Date": "Fri, 13 Nov 2026 17:03:54 GMT",
+        "Etag": "\"6f1dd6105cf31f0016f3a1c3ec9e7301\"",
+        "Last-Modified": "Fri, 13 Nov 2026 15:16:52 GMT",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::796vp-1794589434484-fe7306d453eb",
+        "Connection": "close"
+      }
+    },
+    {
+      "url": "https://velcorisindustries.com/assets/proxy-cyt0Wz5B.js",
+      "final_url": "https://velcorisindustries.com/assets/proxy-cyt0Wz5B.js",
+      "status": 200,
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "5363",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline; filename=\"proxy-cyt0Wz5B.js\"",
+        "Content-Length": "131218",
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Date": "Fri, 13 Nov 2026 17:03:54 GMT",
+        "Etag": "\"819189e599759feb3989cdb966257fd6\"",
+        "Last-Modified": "Fri, 13 Nov 2026 15:34:30 GMT",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::hbrtk-1794589434949-766f132e4db3",
+        "Connection": "close"
+      }
+    },
+    {
+      "url": "https://velcorisindustries.com/assets/index.esm-X57QQiys.js",
+      "final_url": "https://velcorisindustries.com/assets/index.esm-X57QQiys.js",
+      "status": 200,
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "4524",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline; filename=\"index.esm-X57QQiys.js\"",
+        "Content-Length": "16780",
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Date": "Fri, 13 Nov 2026 17:03:55 GMT",
+        "Etag": "\"a315ae1e4f789814e47926c55eb2ff08\"",
+        "Last-Modified": "Fri, 13 Nov 2026 15:48:30 GMT",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::922jd-1794589435336-095b20cb1232",
+        "Connection": "close"
+      }
+    },
+    {
+      "url": "https://velcorisindustries.com/assets/StaticDataContext-CMHAoIrE.js",
+      "final_url": "https://velcorisindustries.com/assets/StaticDataContext-CMHAoIrE.js",
+      "status": 200,
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "5364",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline; filename=\"StaticDataContext-CMHAoIrE.js\"",
+        "Content-Length": "215",
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Date": "Fri, 13 Nov 2026 17:03:55 GMT",
+        "Etag": "\"6e3268af370b696b521a2e5246ada9a2\"",
+        "Last-Modified": "Fri, 13 Nov 2026 15:34:30 GMT",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::wfc2n-1794589435603-e791ea86ca52",
+        "Connection": "close"
+      }
+    },
+    {
+      "url": "https://velcorisindustries.com/assets/preload-helper-BXl3LOEh.js",
+      "final_url": "https://velcorisindustries.com/assets/preload-helper-BXl3LOEh.js",
+      "status": 200,
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "6423",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline; filename=\"preload-helper-BXl3LOEh.js\"",
+        "Content-Length": "1110",
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Date": "Fri, 13 Nov 2026 17:03:55 GMT",
+        "Etag": "\"4649f67496db27f2d97163b376179c9d\"",
+        "Last-Modified": "Fri, 13 Nov 2026 15:16:52 GMT",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::zzp4c-1794589435872-f34bc2ce5fec",
+        "Connection": "close"
+      }
+    },
+    {
+      "url": "https://velcorisindustries.com/assets/chunk-6CSD65Y2-DO0Op7v3.js",
+      "final_url": "https://velcorisindustries.com/assets/chunk-6CSD65Y2-DO0Op7v3.js",
+      "status": 200,
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "554092",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline; filename=\"chunk-6CSD65Y2-DO0Op7v3.js\"",
+        "Content-Length": "37026",
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Date": "Fri, 13 Nov 2026 17:03:56 GMT",
+        "Etag": "\"9df8d7e9a71625b506d53ec6870d67f8\"",
+        "Last-Modified": "Sat, 07 Nov 2026 07:09:03 GMT",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::2bd7c-1794589436115-d00a3d01cd5c",
+        "Connection": "close"
+      }
+    }
+  ],
+  "frontend_markers": [
+    "React/ReactDOM in downloaded main/proxy bundles",
+    "Vite dependency/preload markers",
+    "React Router references",
+    "HTML contains populated content and prerender/SSR markers"
+  ],
+  "contact_integration": {
+    "endpoint_host": "script.google.com",
+    "method": "POST",
+    "content_type": "text/plain;charset=utf-8",
+    "body": "JSON encoded enquiry fields",
+    "runtime_result": "Not tested on company system",
+    "fallback": "Contact bundle simulates success for a YOUR-DEPLOYMENT-ID placeholder",
+    "referenced_bundles": [
+      "https://velcorisindustries.com/assets/Contact-Bc3sy0et.js",
+      "https://velcorisindustries.com/assets/ContactWidget-BB4ghExF.js",
+      "https://velcorisindustries.com/assets/constants-CEDmlvht.js"
+    ]
+  },
+  "dns": {
+    "A": [
+      "216.198.79.1"
+    ],
+    "AAAA": [],
+    "NS": [
+      "ns11.wixdns.net.",
+      "ns10.wixdns.net."
+    ],
+    "MX": [
+      "50 mx3.zoho.in.",
+      "10 mx.zoho.in.",
+      "20 mx2.zoho.in."
+    ],
+    "SPF": [
+      "v=spf1 include:zoho.in ~all"
+    ],
+    "DMARC_policy_terms": [
+      "p=none",
+      "sp=none",
+      "adkim=r",
+      "aspf=r"
+    ],
+    "aggregate_reporting_address_present": false,
+    "DKIM": "Not verified; active selector unavailable."
+  },
+  "limitations": [
+    "No internal account access",
+    "No backend source or database access",
+    "No mail delivery test",
+    "No load or vulnerability scan",
+    "Headers and DNS are a point-in-time sample"
+  ]
+}

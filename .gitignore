@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Local databases and runtime data
+prototype/.data/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+!reports/task-2/Demo-Enquiries.sqlite
+
+# Build and output artifacts
+prototype/dist/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# AI agent metadata and logs
+.antigravity/
+.gemini/
+.cursor/
+.claude/
+.windsurf/
+.aider*
+.openai/
+

@@ -1,0 +1,105 @@
+{
+  "observed_at_utc": "2026-11-13T17:28:43.184Z",
+  "origin": "https://velcoris-redesign-study.example.internal",
+  "steps": {
+    "health": {
+      "status": 200,
+      "body": {
+        "ok": true,
+        "database": "connected"
+      }
+    },
+    "anonymous_admin": {
+      "status": 401
+    },
+    "create": {
+      "status": 201,
+      "body": {
+        "id": "c15d575b-f0c7-4f65-bf61-778e92cecf69",
+        "createdAt": "2026-11-13T17:28:51.975Z",
+        "duplicate": false
+      }
+    },
+    "duplicate": {
+      "status": 200,
+      "body": {
+        "id": "c15d575b-f0c7-4f65-bf61-778e92cecf69",
+        "createdAt": "2026-11-13T17:28:51.975Z",
+        "duplicate": true
+      }
+    },
+    "retrieve": {
+      "status": 200,
+      "body": {
+        "enquiries": [
+          {
+            "id": "c15d575b-f0c7-4f65-bf61-778e92cecf69",
+            "name": "Hosted Demo Reviewer",
+            "email": "hosted-demo@example.com",
+            "organisation": "Example Materials Lab",
+            "intent": "Sample evaluation",
+            "material": "FLG",
+            "message": "Fictional hosted demonstration: compare coating dispersion under controlled test conditions.",
+            "status": "new",
+            "revision": 0,
+            "created_at": "2026-11-13T17:28:51.975Z",
+            "updated_at": "2026-11-13T17:28:51.975Z"
+          }
+        ],
+        "total": 1,
+        "page": 1,
+        "pageSize": 20,
+        "totalPages": 1
+      }
+    },
+    "update": {
+      "status": 200,
+      "body": {
+        "enquiry": {
+          "id": "c15d575b-f0c7-4f65-bf61-778e92cecf69",
+          "name": "Hosted Demo Reviewer",
+          "email": "hosted-demo@example.com",
+          "organisation": "Example Materials Lab",
+          "intent": "Sample evaluation",
+          "material": "FLG",
+          "message": "Fictional hosted demonstration: compare coating dispersion under controlled test conditions.",
+          "status": "in_progress",
+          "revision": 1,
+          "created_at": "2026-11-13T17:28:51.975Z",
+          "updated_at": "2026-11-13T17:28:52.646Z"
+        }
+      }
+    },
+    "stale_update": {
+      "status": 409,
+      "body": {
+        "error": "This enquiry changed. Refresh before updating it."
+      }
+    },
+    "retrieve_after_update": {
+      "status": 200,
+      "body": {
+        "enquiries": [
+          {
+            "id": "c15d575b-f0c7-4f65-bf61-778e92cecf69",
+            "name": "Hosted Demo Reviewer",
+            "email": "hosted-demo@example.com",
+            "organisation": "Example Materials Lab",
+            "intent": "Sample evaluation",
+            "material": "FLG",
+            "message": "Fictional hosted demonstration: compare coating dispersion under controlled test conditions.",
+            "status": "in_progress",
+            "revision": 1,
+            "created_at": "2026-11-13T17:28:51.975Z",
+            "updated_at": "2026-11-13T17:28:52.646Z"
+          }
+        ],
+        "total": 1,
+        "page": 1,
+        "pageSize": 20,
+        "totalPages": 1
+      }
+    }
+  },
+  "passed": true
+}

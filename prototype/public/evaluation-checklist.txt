@@ -1,0 +1,15 @@
+SAMPLE EVALUATION CHECKLIST — INDEPENDENT DESIGN CONCEPT
+This is a preparation aid, not an official Velcoris technical document.
+
+1. State the host matrix, manufacturing process and target property.
+2. Record the control formulation and your baseline test results.
+3. Ask the supplier which material grade is appropriate to investigate.
+4. Request the current technical datasheet and safety data sheet.
+5. Ask for relevant batch characterisation and available sample quantity.
+6. Agree on dispersion, handling and test requirements with qualified staff.
+7. Define acceptance criteria before testing.
+8. Record test conditions, repeatability and differences from the control.
+9. Review the evidence before a production supply discussion.
+
+Company source: https://velcorisindustries.com/technology
+Independent concept prepared 13 November 2026.

@@ -1,0 +1,36 @@
+{
+  "description": "Fictional local HTTP demonstration; the record below was retrieved again after its status update.",
+  "reference": "245facbc-c147-4155-bc05-691cec49c1a1",
+  "verified_http_steps": {
+    "homepage": 200,
+    "admin_page": 200,
+    "unauthenticated_list": 401,
+    "create": 201,
+    "retrieve": 200,
+    "status_update": 200
+  },
+  "retrieved_after_update": {
+    "enquiries": [
+      {
+        "id": "245facbc-c147-4155-bc05-691cec49c1a1",
+        "name": "HTTP Demo Reviewer",
+        "email": "http-demo@example.com",
+        "organisation": "Example Evaluation Lab",
+        "intent": "Technical discussion",
+        "material": "GO",
+        "message": "Fictional HTTP demonstration for a coating evaluation project.",
+        "status": "in_progress",
+        "revision": 1,
+        "created_at": "2026-11-13T17:21:08.944Z",
+        "updated_at": "2026-11-13T17:21:08.957Z"
+      }
+    ],
+    "total": 1,
+    "page": 1,
+    "pageSize": 20,
+    "totalPages": 1
+  },
+  "database_snapshot_matches_api": true,
+  "database_file": "Demo-Enquiries.sqlite",
+  "note": "Local SQLite and hosted D1 are separate databases. This file contains fictional local demonstration data only."
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-13",
+  "hostedFormReference": "55c746d5-c2af-4352-9a63-0180ccca801c",
+  "verified": [
+    "GO material selection carried into form",
+    "Fictional enquiry submitted through website",
+    "Saved-reference receipt displayed",
+    "Same record retrieved by reference in enquiry desk",
+    "Stored record remained after page reload",
+    "Status filtering and status update to Resolved verified on API demo record"
+  ],
+  "desktopViewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "phoneViewport": {
+    "width": 390,
+    "height": 844,
+    "documentScrollWidth": 375
+  },
+  "limitations": [
+    "No comprehensive accessibility audit",
+    "No load or field performance test",
+    "No email delivery implementation or test"
+  ]
+}
